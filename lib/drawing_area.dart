@@ -11,12 +11,12 @@ class DrawingArea extends StatefulWidget {
 }
 
 class DrawingAreaState extends State<DrawingArea> {
-  List<DrawingPoint> points = [];
+  List<DrawingPoint?> points = [];
   Paint paint = Paint()
     ..color = Colors.black
     ..strokeCap = StrokeCap.round
     ..isAntiAlias = true
-    ..strokeWidth = 5.0;
+    ..strokeWidth = 10.0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,11 @@ class DrawingAreaState extends State<DrawingArea> {
               paint: paint));
         });
       },
-      // onPanEnd: (details) {
-      //   setState(() {
-      //     points.add(null);
-      //   });
-      // },
+      onPanEnd: (details) {
+        setState(() {
+          points.add(null);
+        });
+      },
       child: CustomPaint(
         painter: MyCustomPainter(points: points),
         child: Container(),
