@@ -89,7 +89,7 @@ class DrawingAreaState extends State<DrawingArea> {
   }
 
   Future<void> saveImage(Uint8List pngBytes) async {
-    final directory = await getApplicationDocumentsDirectory();
+    final directory = await getTemporaryDirectory();
     final imagePath = await File('${directory.path}/my_image.png').create();
     await imagePath.writeAsBytes(pngBytes);
   }
