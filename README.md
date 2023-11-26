@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+Detailed explanation from ChatGPT: https://chat.openai.com/share/c3af9b8b-8385-4d0f-b8a6-ca66a29ce6ce
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
